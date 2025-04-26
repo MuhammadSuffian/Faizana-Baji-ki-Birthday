@@ -13,7 +13,7 @@ import math
 
 # Page configuration
 st.set_page_config(
-    page_title="✨ AAMNA's Special Day ✨",
+    page_title="✨ Faizan's Special Day ✨",
     page_icon="💖",
     layout="wide",
     initial_sidebar_state="collapsed",
@@ -452,7 +452,7 @@ def get_premium_birthday_wishes():
 def fancy_header(text, element_class="shimmer-text", tag="h1"):
     return f'<{tag} class="{element_class}">{text}</{tag}>'
 
-# Personal memories and quotes for AAMNA
+# Personal memories and quotes for Faizan
 def get_personal_memories():
     return [
         "Remember when we laughed until we cried during that road trip?",
@@ -462,31 +462,28 @@ def get_personal_memories():
         "Your friendship is one of life's greatest treasures.",
         "You always know exactly what to say to make everyone feel special.",
         "Your determination in facing challenges is truly inspiring.",
-        "That time we stayed up all night talking about our dreams.",
-        "Even though you're vertically challenged, your personality is sky-high!",
-        "You may need a step stool sometimes, but your heart is bigger than anyone I know.",
-        "Good things come in small packages - you're the perfect example!"
+        "That time we stayed up all night talking about our dreams."
     ]
 
-# Check if today is May 13
+# Check if today is May 8
 def is_birthday():
     # Use a specific timezone (e.g., Asia/Karachi for Pakistan Standard Time)
     timezone = pytz.timezone('Asia/Karachi')
     today = datetime.now(timezone).date()
-    return today.month == 5 and today.day == 13
+    return today.month == 5 and today.day == 8
 
-# Calculate time until May 13
+# Calculate time until May 8
 def time_until_birthday():
     timezone = pytz.timezone('Asia/Karachi')
     now = datetime.now(timezone)
     current_year = now.year
     
     # Create birthday datetime object for this year
-    birthday = datetime(current_year, 5, 13, 0, 0, 0, tzinfo=timezone)
+    birthday = datetime(current_year, 5, 8, 0, 0, 0, tzinfo=timezone)
     
     # If birthday has already passed this year, look for next year
     if now > birthday:
-        birthday = datetime(current_year + 1, 5, 13, 0, 0, 0, tzinfo=timezone)
+        birthday = datetime(current_year + 1, 5, 8, 0, 0, 0, tzinfo=timezone)
     
     # Calculate time remaining
     delta = birthday - now
@@ -506,7 +503,7 @@ def show_premium_countdown():
         st.markdown("""
         <div class="premium-container reflection">
             <h2 style="text-align: center; font-family: 'Playfair Display', serif; margin-bottom: 30px;">
-                AAMNA's Birthday Celebration
+                Faizan's Birthday Celebration
             </h2>
         """, unsafe_allow_html=True)
         
@@ -585,10 +582,10 @@ def main():
     except:
         pass  # Silently fail if audio can't be loaded
     
-    # Check if today is May 13
+    # Check if today is May 8
     show_full_content = is_birthday()
     
-    # If it's not May 13, show countdown instead
+    # If it's not May 8, show countdown instead
     if not show_full_content:
         access_granted = show_premium_countdown()
         
@@ -602,14 +599,14 @@ def main():
             st.markdown("""
             <div style="text-align: center; margin-top: 50px; padding-top: 30px; border-top: 1px solid #eee;">
                 <p style="font-family: 'Montserrat', sans-serif; font-size: 0.9rem; color: #666;">
-                    Crafted with ❤️ for AAMNA's Special Day | 2025
+                    Crafted with ❤️ for Faizan's Special Day | 2025
                 </p>
             </div>
             """, unsafe_allow_html=True)
             return
     
     # Fixed recipient information
-    recipient_name = "AAMNA"
+    recipient_name = "Faizan"
     
     # Full birthday content
     col1, col2, col3 = st.columns([1, 3, 1])
@@ -633,21 +630,19 @@ def main():
     """, unsafe_allow_html=True)
     
     # Display premium personalized message
-    # Display premium personalized message
     birthday_message = random.choice(get_premium_birthday_wishes())
     
     st.markdown(f"""
         <div class="message-card">
             <h2 style="font-family: 'Montserrat', sans-serif; font-weight: 600; margin-bottom: 20px; color: #333;">
-                Dearest AAMNA,
+                Dearest Faizan,
             </h2>
             <p style="font-family: 'Playfair Display', serif; font-size: 1.3rem; line-height: 1.8; color: #444; margin-bottom: 20px;">
-                {birthday_message} Even though you're small in stature, your presence fills up any room with joy!
+                {birthday_message}
             </p>
             <p style="font-family: 'Montserrat', sans-serif; font-size: 1.1rem; color: #666; margin-top: 30px;">
                 On this remarkable day, I wanted to create something as special as you are to celebrate your birthday. 
-                Your kindness, intelligence, and wonderful spirit deserve nothing but the best celebration. 
-                They say good things come in small packages, and you're the perfect proof of that!
+                Your kindness, intelligence, and wonderful spirit deserve nothing but the best celebration.
             </p>
             <p class="rose-gold-text" style="text-align: right; font-size: 1.5rem; margin-top: 30px;">
                 With love and appreciation,<br>
@@ -766,11 +761,11 @@ def main():
              style="border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); margin-bottom: 30px;">
         
         <h2 style="font-family: 'Dancing Script', cursive; font-size: 3rem; color: #d4af37; margin: 20px 0;">
-            Happy Birthday AAMNA!
+            Happy Birthday Faizan!
         </h2>
         
         <p style="font-family: 'Montserrat', sans-serif; font-size: 1.2rem; color: #666; margin-bottom: 40px;">
-            May your special day bring you all that your heart desires (and maybe a few extra inches in height)! 😉
+            May your special day bring you all that your heart desires!
         </p>
     </div>
                 </style>
@@ -787,7 +782,7 @@ def main():
     st.markdown("""
     <div style="text-align: center; margin-top: 50px; padding-top: 30px; border-top: 1px solid #eee;">
         <p style="font-family: 'Montserrat', sans-serif; font-size: 0.9rem; color: #666;">
-            Crafted with ❤️ especially for AAMNA | 2025
+            Crafted with ❤️ especially for Faizan | 2025
         </p>
     </div>
     """, unsafe_allow_html=True)
